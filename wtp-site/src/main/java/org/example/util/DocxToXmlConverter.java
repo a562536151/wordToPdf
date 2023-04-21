@@ -5,16 +5,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
+import static org.example.util.Constants.docxFilePath;
+import static org.example.util.Constants.xmlFilePath;
 
 public class DocxToXmlConverter{
 
     public void docxToXml() throws IOException {
-        // docx文件路径
-        String docxFilePath = "C:\\Users\\1\\Desktop\\workTppdf\\template.docx";
-        // 解压目录
-        String unzipPath = "C:\\Users\\1\\Desktop\\workTppdf";
-        // 输出文件路径
-        String xmlFilePath = "C:\\Users\\1\\Desktop\\workTppdf\\document.xml";
+
 
         // 创建ZipFile对象
         ZipFile zipFile = new ZipFile(docxFilePath);

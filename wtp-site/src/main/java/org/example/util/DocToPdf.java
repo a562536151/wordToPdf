@@ -21,11 +21,10 @@ import java.util.UUID;
  **/
 public class DocToPdf {
 
-    static String docTemplatePath = Constants.docXmlTemplatePath;
     public static boolean getLicense() {
         boolean result = false;
         try {
-            InputStream is = new FileInputStream(docTemplatePath+Constants.licensePath);
+            InputStream is = new FileInputStream(Constants.licensePath);
             License aposeLic = new License();
             aposeLic.setLicense(is);
             result = true;
@@ -44,7 +43,7 @@ public class DocToPdf {
             String templateUUId = UUID.randomUUID().toString();
             String baseUrl=System.getProperty("java.io.tmpdir")+"/";
             String xml = baseUrl+templateUUId+".xml";
-            XmlToDocx.toDocx(documentXmlName,docTemplatePath+documentDocName,xml,baseUrl+templateUUId+".docx",params);
+            XmlToDocx.toDocx(documentXmlName,Constants.docTemplatePath+documentDocName,xml,baseUrl+templateUUId+".docx",params);
             String docx = baseUrl+templateUUId+".docx";
             String pdf = baseUrl+templateUUId+".pdf";
             File file = new File(pdf); // 新建一个空白pdf文档
