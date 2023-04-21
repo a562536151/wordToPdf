@@ -7,8 +7,6 @@ import java.io.IOException;
 import java.io.Writer;
 import java.util.Map;
 
-import static org.example.util.Constants.docXmlTemplatePath;
-
 /**
  * @description  word动态填充工具类
  **/
@@ -20,7 +18,7 @@ public class XmlTplUtil {
     private XmlTplUtil() {
         cfg = new Configuration();
         try {
-            cfg.setDirectoryForTemplateLoading(new File(docXmlTemplatePath));
+            cfg.setDirectoryForTemplateLoading(new File(Constants.docXmlTemplatePath));
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -19,8 +19,10 @@ public class App
 
     public static void main( String[] args ) throws Exception {
         Map<String,Object> params = new HashMap<String,Object>();
-        params.put("name","2023");
-        params.put("month","2");
+        params.put("number","20230101");
+        params.put("company","北京国家电网");
+        params.put("name","北京北京北京北京");
+        params.put("money","2333333333");
         DocxToXmlConverter docxToXmlConverter = new DocxToXmlConverter();
         docxToXmlConverter.docxToXml();
         String pdfPath = DocToPdf.DocToPdf(params, "document.xml", "template.docx");
